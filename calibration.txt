@@ -1,3 +1,4 @@
+📝 Logging to: calibration.log
 🚀 Initializing Memory-Enhanced LLM...
 🔌 Testing Ollama connection...
 ✅ Ollama connection working
@@ -23,14 +24,7 @@ Press ENTER to proceed, or Ctrl+C to abort...
 👋 Handling social interaction
 
 🤖: 
-Hello to you too! 😊 How's your day going so far? Is there anything I can help you with today? 
-
-Do you want to:
-
-*   Chat about something?
-*   Get some information?
-*   Play a game?
-*   Just say hello?
+Hey there! How’s your day going so far? Anything interesting happen? I’m just here to chat – feel free to tell me anything that’s on your mind. 😊
 
 🆕 (new memory created, social_interaction, conf: 0.80)
 
@@ -44,29 +38,21 @@ Press ENTER to proceed, or Ctrl+C to abort...
 💭 Processing: "My name is Sarah."
 
 🤖: 
-information_providing:0.9:User is providing personal information (name), which is a common form of information sharing.
+information_providing:0.9:User is introducing themselves, providing personal information. It’s a natural response to an initial greeting and an invitation to chat. Let’s respond to this and get to know Sarah a little better! INTENT_TYPE:information_providing:0.9:User is sharing basic personal information – their name.
 
 🎯 Intent: information_providing (confidence: 0.9) - information_providing (learned classification)
-💡 Reasoning: User is providing personal information (name), which is a common form of information sharing.
+💡 Reasoning: User is introducing themselves, providing personal information. It’s a natural response to an initial greeting and an invitation to chat. Let’s respond to this and get to know Sarah a little better! INTENT_TYPE
 🔗 Detected continuation, boosting recent memory: "Hello there!..."
 🔍 Memory similarities:
-   0.665 (emb:0.065 ent:0.0 id:0.0 age:0.0 cnt:0.0 cont:0.6) [0min, 214chars]: "Hello there!..."
+   0.665 (emb:0.065 ent:0.0 id:0.0 age:0.0 cnt:0.0 cont:0.6) [0min, 158chars]: "Hello there!..."
 📝 Acknowledging information provided by user
 
 🤖: 
-“Hello Sarah! It’s lovely to meet you. 😊 So nice to finally put a name to the friendly voice! How’s your day going so far? Is there anything I can help you with today? 
-
-Do you want to:
-
-*   Chat about something?
-*   Get some information?
-*   Play a game?
-*   Just say hello?”
+Oh, hi Sarah! It’s really nice to meet you. That’s a lovely name. So, Sarah – what brings you here today? Just browsing, or were you hoping to talk about something specific? 😊
 
 ✨ (used 1 memories, information_providing, conf: 0.90)
 
 ============================================================
-
 
 📝 Step 3/12
 Input: "Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland creatures and became the hero of the forest."
@@ -76,28 +62,23 @@ Press ENTER to proceed, or Ctrl+C to abort...
 💭 Processing: "Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland creatures and became the hero of the forest."
 
 🤖: 
-information_providing:0.9:User is sharing a narrative, fulfilling the "Chat about something?" option presented by the assistant.
+INTENT_TYPE:information_providing:0.95:The user is sharing a narrative – a story – which is a clear presentation of information. It’s a natural continuation of the friendly conversation and invites further interaction about the story itself.
 
-🎯 Intent: information_providing (confidence: 0.9) - information_providing (learned classification)
-💡 Reasoning: User is sharing a narrative, fulfilling the "Chat about something?" option presented by the assistant.
+🎯 Intent: INTENT_TYPE (confidence: 0.5) - INTENT_TYPE (learned classification)
+💡 Reasoning: 0.95
 🔗 Detected continuation, boosting recent memory: "Hello there!..."
 🔗 Detected continuation, boosting recent memory: "My name is Sarah...."
 🔍 Memory similarities:
-   0.970 (emb:0.256 ent:0.0 id:0.0 age:0.0 cnt:0.1 cont:0.6) [0min, 294chars]: "My name is Sarah...."
-   0.868 (emb:0.168 ent:0.0 id:0.0 age:0.0 cnt:0.1 cont:0.6) [0min, 214chars]: "Hello there!..."
-📝 Acknowledging information provided by user
+   0.899 (emb:0.256 ent:0.0 id:0.0 age:0.0 cnt:0.0 cont:0.6) [0min, 193chars]: "My name is Sarah...."
+   0.840 (emb:0.168 ent:0.0 id:0.0 age:0.0 cnt:0.1 cont:0.6) [0min, 158chars]: "Hello there!..."
+💬 Handling general conversation or request
 
 🤖: 
-“Wow, that sounds like a wonderful story, Sarah! A clever fox and a treasure of golden acorns – what a fantastic adventure! 😊 That’s a really charming tale. 
+Wow, that’s a fantastic story! Rusty the fox sounds like a really special character. A golden acorn treasure chest? That’s brilliant! Did he have any particular challenges while he was guarding the treasure, or was it all smooth sailing? 
 
-Do you want to:
+I love a good fairytale. It just made me think, what kind of forest was it like? Was it dark and mysterious, or bright and full of sunshine? And what were some of the other woodland creatures like? Did he have any friends who helped him?
 
-*   Chat about something?
-*   Get some information?
-*   Play a game?
-*   Just say hello?”
-
-✨ (used 2 memories, information_providing, conf: 0.90)
+✨ (used 2 memories, INTENT_TYPE, conf: 0.50)
 
 ============================================================
 
@@ -109,28 +90,68 @@ Press ENTER to proceed, or Ctrl+C to abort...
 💭 Processing: "What was the fox's name in my story?"
 
 🤖: 
-fact_check_question:0.9:User is asking for a specific detail (the fox's name) from the story they just told.
+fact_check_question:0.9:The user is seeking a specific detail (the fox’s name) from the story they just recounted. It’s a direct follow-up to their previous statement and aligns with the conversational flow of clarifying details within a shared narrative.
 
 🎯 Intent: fact_check_question (confidence: 0.9) - fact_check_question (learned classification)
-💡 Reasoning: User is asking for a specific detail (the fox's name) from the story they just told.
+💡 Reasoning: The user is seeking a specific detail (the fox’s name) from the story they just recounted. It’s a direct follow-up to their previous statement and aligns with the conversational flow of clarifying details within a shared narrative.
 🔍 Memory similarities:
-   0.595 (emb:0.295 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [0min, 506chars]: "Let me tell you a story about a clever f..."
-   0.325 (emb:0.125 ent:0.0 id:0.0 age:0.0 cnt:0.2 cont:0.0) [0min, 294chars]: "My name is Sarah...."
-   0.177 (emb:0.077 ent:0.0 id:0.0 age:0.0 cnt:0.1 cont:0.0) [0min, 214chars]: "Hello there!..."
+   0.695 (emb:0.295 ent:0.0 id:0.0 age:0.0 cnt:0.4 cont:0.0) [0min, 717chars]: "Let me tell you a story about a clever f..."
+   0.225 (emb:0.125 ent:0.0 id:0.0 age:0.0 cnt:0.1 cont:0.0) [0min, 193chars]: "My name is Sarah...."
+   0.177 (emb:0.077 ent:0.0 id:0.0 age:0.0 cnt:0.1 cont:0.0) [0min, 158chars]: "Hello there!..."
 🔍 Handling fact-check question about previous conversation
 🔍 Question terms: what, fox, name, story
 🔍 Context check: FOUND relevant content
-🔍 Context preview: "Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he dis..."
+🔍 Context preview: "Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland crea..."
+🔍 Full context text: "Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland creatures and became the hero of the forest. Wow, that’s a fantastic story! Rusty the fox sounds like a really special character. A golden acorn treasure chest? That’s brilliant! Did he have any particular challenges while he was guarding the treasure, or was it all smooth sailing? 
+
+I love a good fairytale. It just made me think, what kind of forest was it like? Was it dark and mysterious, or bright and full of sunshine? And what were some of the other woodland creatures like? Did he have any friends who helped him? My name is Sarah. Oh, hi Sarah! It’s really nice to meet you. That’s a lovely name. So, Sarah – what brings you here today? Just browsing, or were you hoping to talk about something specific? 😊 Hello there! Hey there! How’s your day going so far? Anything interesting happen? I’m just here to chat – feel free to tell me anything that’s on your mind. 😊"
+🔍 SENDING TO LLM:
+Based on this conversation history:
+Previously: User said "Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland creatures and became the hero of the forest." and you responded "Wow, that’s a fantastic story! Rusty the fox sounds like a really special character. A golden acorn treasure chest? That’s brilliant! Did he have any particular challenges while he was guarding the treasure, or was it all smooth sailing? 
+
+I love a good fairytale. It just made me think, what kind of forest was it like? Was it dark and mysterious, or bright and full of sunshine? And what were some of the other woodland creatures like? Did he have any friends who helped him?"
+Previously: User said "My name is Sarah." and you responded "Oh, hi Sarah! It’s really nice to meet you. That’s a lovely name. So, Sarah – what brings you here today? Just browsing, or were you hoping to talk about something specific? 😊"
+Previously: User said "Hello there!" and you responded "Hey there! How’s your day going so far? Anything interesting happen? I’m just here to chat – feel free to tell me anything that’s on your mind. 😊"
+
+CRITICAL INSTRUCTIONS - READ CAREFULLY:
+- You are answering a FACT-CHECK question, NOT having a conversation
+- Answer with ONLY the bare minimum fact requested - NO additional words
+- Do NOT add "Wow", "amazing", questions, commentary, or conversation
+- Do NOT be conversational, chatty, or ask follow-up questions
+- STOP after giving the fact - do not continue talking
+- If the specific answer isn't clearly stated in the conversation history, say "I don't recall that from our conversation"
+- Examples: 
+  - Question "What is my name?" → Answer "Sarah" (ONLY the name, no mention of stories or characters)
+  - Question "What did the fox find?" → Answer "A treasure chest with golden acorns" (ONLY what was found)
+  - Question "What is my name again?" → Answer "Sarah" (ONLY the name, no extra commentary)
+
+Question: What was the fox's name in my story?
+--- END CONTEXT ---
 
 🤖: 
-The fox’s name was Rusty.
+Rusty
 
-🔬 Confidence check: 100.0%
+🔍 RAW LLM RESPONSE: "Rusty"
+🔬 === VERIFICATION DEBUG ===
+🔬 Original question: "What was the fox's name in my story?"
+🔬 LLM response: "Rusty"
+🔬 Context text: "Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland creatures and became the hero of the forest. Wow, that’s a fantastic story! Rusty the fox sounds like a really special character. A golden acorn treasure chest? That’s brilliant! Did he have any particular challenges while he was guarding the treasure, or was it all smooth sailing? 
+
+I love a good fairytale. It just made me think, what kind of forest was it like? Was it dark and mysterious, or bright and full of sunshine? And what were some of the other woodland creatures like? Did he have any friends who helped him? My name is Sarah. Oh, hi Sarah! It’s really nice to meet you. That’s a lovely name. So, Sarah – what brings you here today? Just browsing, or were you hoping to talk about something specific? 😊 Hello there! Hey there! How’s your day going so far? Anything interesting happen? I’m just here to chat – feel free to tell me anything that’s on your mind. 😊"
+🔬 Question terms: [what, fox, name, story]
+🔬 Question terms in context: [what, fox, name, story]
+🔬 Question terms in response: []
+🔬 Question type detected: what_name
+🔬 Response matches question type: true
+🔬 Verified entities: [Rusty]
+🔬 Unverified entities: []
+🔬 Entity confidence: 100.0%
 🔬 Addresses question: true
+🔬 === END VERIFICATION ===
+✅ VERIFICATION PASSED - Returning LLM response
 ✨ (used 3 memories, fact_check_question, conf: 0.90)
 
 ============================================================
-
 
 📝 Step 5/12
 Input: "What did Rusty find in the forest?"
@@ -140,24 +161,65 @@ Press ENTER to proceed, or Ctrl+C to abort...
 💭 Processing: "What did Rusty find in the forest?"
 
 🤖: 
-fact_check_question:0.9:User is asking for a specific detail (the treasure Rusty found) from a previously shared story.
+fact_check_question:0.9:The user is seeking a specific detail from the story they previously told, mirroring the pattern of questions about Rusty's story.
 
 🎯 Intent: fact_check_question (confidence: 0.9) - fact_check_question (learned classification)
-💡 Reasoning: User is asking for a specific detail (the treasure Rusty found) from a previously shared story.
+💡 Reasoning: The user is seeking a specific detail from the story they previously told, mirroring the pattern of questions about Rusty's story.
 🔍 Memory similarities:
-   0.997 (emb:0.297 ent:0.4 id:0.0 age:0.0 cnt:0.3 cont:0.0) [0min, 506chars]: "Let me tell you a story about a clever f..."
-   0.941 (emb:0.341 ent:0.4 id:0.0 age:0.0 cnt:0.2 cont:0.0) [0min, 61chars]: "What was the fox's name in my story?..."
-   0.219 (emb:0.119 ent:0.0 id:0.0 age:0.0 cnt:0.1 cont:0.0) [0min, 294chars]: "My name is Sarah...."
+   1.097 (emb:0.297 ent:0.4 id:0.0 age:0.0 cnt:0.4 cont:0.0) [0min, 717chars]: "Let me tell you a story about a clever f..."
+   0.941 (emb:0.341 ent:0.4 id:0.0 age:0.0 cnt:0.2 cont:0.0) [0min, 41chars]: "What was the fox's name in my story?..."
+   0.170 (emb:0.070 ent:0.0 id:0.0 age:0.0 cnt:0.1 cont:0.0) [1min, 158chars]: "Hello there!..."
 🔍 Handling fact-check question about previous conversation
 🔍 Question terms: what, rusty, find, forest
 🔍 Context check: FOUND relevant content
-🔍 Context preview: "Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he dis..."
+🔍 Context preview: "Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland crea..."
+🔍 Full context text: "Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland creatures and became the hero of the forest. Wow, that’s a fantastic story! Rusty the fox sounds like a really special character. A golden acorn treasure chest? That’s brilliant! Did he have any particular challenges while he was guarding the treasure, or was it all smooth sailing? 
+
+I love a good fairytale. It just made me think, what kind of forest was it like? Was it dark and mysterious, or bright and full of sunshine? And what were some of the other woodland creatures like? Did he have any friends who helped him? What was the fox's name in my story? Rusty Hello there! Hey there! How’s your day going so far? Anything interesting happen? I’m just here to chat – feel free to tell me anything that’s on your mind. 😊"
+🔍 SENDING TO LLM:
+Based on this conversation history:
+Previously: User said "Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland creatures and became the hero of the forest." and you responded "Wow, that’s a fantastic story! Rusty the fox sounds like a really special character. A golden acorn treasure chest? That’s brilliant! Did he have any particular challenges while he was guarding the treasure, or was it all smooth sailing? 
+
+I love a good fairytale. It just made me think, what kind of forest was it like? Was it dark and mysterious, or bright and full of sunshine? And what were some of the other woodland creatures like? Did he have any friends who helped him?"
+Previously: User said "What was the fox's name in my story?" and you responded "Rusty"
+Previously: User said "Hello there!" and you responded "Hey there! How’s your day going so far? Anything interesting happen? I’m just here to chat – feel free to tell me anything that’s on your mind. 😊"
+
+CRITICAL INSTRUCTIONS - READ CAREFULLY:
+- You are answering a FACT-CHECK question, NOT having a conversation
+- Answer with ONLY the bare minimum fact requested - NO additional words
+- Do NOT add "Wow", "amazing", questions, commentary, or conversation
+- Do NOT be conversational, chatty, or ask follow-up questions
+- STOP after giving the fact - do not continue talking
+- If the specific answer isn't clearly stated in the conversation history, say "I don't recall that from our conversation"
+- Examples: 
+  - Question "What is my name?" → Answer "Sarah" (ONLY the name, no mention of stories or characters)
+  - Question "What did the fox find?" → Answer "A treasure chest with golden acorns" (ONLY what was found)
+  - Question "What is my name again?" → Answer "Sarah" (ONLY the name, no extra commentary)
+
+Question: What did Rusty find in the forest?
+--- END CONTEXT ---
 
 🤖: 
-The fox’s name was Rusty.
+A treasure chest with golden acorns
 
-🔬 Confidence check: 100.0%
+🔍 RAW LLM RESPONSE: "A treasure chest with golden acorns"
+🔬 === VERIFICATION DEBUG ===
+🔬 Original question: "What did Rusty find in the forest?"
+🔬 LLM response: "A treasure chest with golden acorns"
+🔬 Context text: "Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland creatures and became the hero of the forest. Wow, that’s a fantastic story! Rusty the fox sounds like a really special character. A golden acorn treasure chest? That’s brilliant! Did he have any particular challenges while he was guarding the treasure, or was it all smooth sailing? 
+
+I love a good fairytale. It just made me think, what kind of forest was it like? Was it dark and mysterious, or bright and full of sunshine? And what were some of the other woodland creatures like? Did he have any friends who helped him? What was the fox's name in my story? Rusty Hello there! Hey there! How’s your day going so far? Anything interesting happen? I’m just here to chat – feel free to tell me anything that’s on your mind. 😊"
+🔬 Question terms: [what, rusty, find, forest]
+🔬 Question terms in context: [what, rusty, forest]
+🔬 Question terms in response: []
+🔬 Question type detected: what_found
+🔬 Response matches question type: true
+🔬 Verified entities: []
+🔬 Unverified entities: []
+🔬 Entity confidence: 0.0%
 🔬 Addresses question: true
+🔬 === END VERIFICATION ===
+✅ VERIFICATION PASSED - Returning LLM response
 ✨ (used 3 memories, fact_check_question, conf: 0.90)
 
 ============================================================
@@ -170,29 +232,71 @@ Press ENTER to proceed, or Ctrl+C to abort...
 💭 Processing: "What is my name?"
 
 🤖: 
-fact_check_question:0.9:The user is asking for information related to their identity, which aligns with recalling details from a previously shared story and confirming information.
+fact_check_question:0.9:The user is recalling details from the story they previously provided, specifically asking about their own identity within the narrative.
 
 🎯 Intent: fact_check_question (confidence: 0.9) - fact_check_question (learned classification)
-💡 Reasoning: The user is asking for information related to their identity, which aligns with recalling details from a previously shared story and confirming information.
+💡 Reasoning: The user is recalling details from the story they previously provided, specifically asking about their own identity within the narrative.
 🔗 Detected continuation, boosting recent memory: "Hello there!..."
 🔗 Detected continuation, boosting recent memory: "My name is Sarah...."
 🔗 Detected continuation, boosting recent memory: "Let me tell you a story about ..."
 🔗 Detected continuation, boosting recent memory: "What was the fox's name in my ..."
 🔗 Detected continuation, boosting recent memory: "What did Rusty find in the for..."
 🔍 Memory similarities:
-   2.010 (emb:0.110 ent:0.0 id:0.8 age:0.0 cnt:0.5 cont:0.6) [0min, 294chars]: "My name is Sarah...."
-   1.473 (emb:0.373 ent:0.0 id:0.0 age:0.0 cnt:0.5 cont:0.6) [0min, 61chars]: "What was the fox's name in my story?..."
-   1.408 (emb:0.308 ent:0.0 id:0.0 age:0.0 cnt:0.5 cont:0.6) [0min, 59chars]: "What did Rusty find in the forest?..."
+   2.010 (emb:0.110 ent:0.0 id:0.8 age:0.0 cnt:0.5 cont:0.6) [1min, 193chars]: "My name is Sarah...."
+   1.473 (emb:0.373 ent:0.0 id:0.0 age:0.0 cnt:0.5 cont:0.6) [0min, 41chars]: "What was the fox's name in my story?..."
+   1.360 (emb:0.260 ent:0.0 id:0.0 age:0.0 cnt:0.5 cont:0.6) [0min, 717chars]: "Let me tell you a story about a clever f..."
 🔍 Handling fact-check question about previous conversation
 🔍 Question terms: what, name
 🔍 Context check: FOUND relevant content
-🔍 Context preview: "My name is Sarah. “Hello Sarah! It’s lovely to meet you. 😊 So nice to finally put a name to the fri..."
+🔍 Context preview: "My name is Sarah. Oh, hi Sarah! It’s really nice to meet you. That’s a lovely name. So, Sarah – what brings you here today? Just browsing, or were you hoping to talk about something specific? 😊 Let m..."
+🔍 Full context text: "My name is Sarah. Oh, hi Sarah! It’s really nice to meet you. That’s a lovely name. So, Sarah – what brings you here today? Just browsing, or were you hoping to talk about something specific? 😊 Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland creatures and became the hero of the forest. Wow, that’s a fantastic story! Rusty the fox sounds like a really special character. A golden acorn treasure chest? That’s brilliant! Did he have any particular challenges while he was guarding the treasure, or was it all smooth sailing? 
+
+I love a good fairytale. It just made me think, what kind of forest was it like? Was it dark and mysterious, or bright and full of sunshine? And what were some of the other woodland creatures like? Did he have any friends who helped him? What was the fox's name in my story? Rusty"
+🔍 SENDING TO LLM:
+Based on this conversation history:
+Previously: User said "My name is Sarah." and you responded "Oh, hi Sarah! It’s really nice to meet you. That’s a lovely name. So, Sarah – what brings you here today? Just browsing, or were you hoping to talk about something specific? 😊"
+Previously: User said "Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland creatures and became the hero of the forest." and you responded "Wow, that’s a fantastic story! Rusty the fox sounds like a really special character. A golden acorn treasure chest? That’s brilliant! Did he have any particular challenges while he was guarding the treasure, or was it all smooth sailing? 
+
+I love a good fairytale. It just made me think, what kind of forest was it like? Was it dark and mysterious, or bright and full of sunshine? And what were some of the other woodland creatures like? Did he have any friends who helped him?"
+Previously: User said "What was the fox's name in my story?" and you responded "Rusty"
+
+CRITICAL INSTRUCTIONS - READ CAREFULLY:
+- You are answering a FACT-CHECK question, NOT having a conversation
+- Answer with ONLY the bare minimum fact requested - NO additional words
+- Do NOT add "Wow", "amazing", questions, commentary, or conversation
+- Do NOT be conversational, chatty, or ask follow-up questions
+- STOP after giving the fact - do not continue talking
+- If the specific answer isn't clearly stated in the conversation history, say "I don't recall that from our conversation"
+- Examples: 
+  - Question "What is my name?" → Answer "Sarah" (ONLY the name, no mention of stories or characters)
+  - Question "What did the fox find?" → Answer "A treasure chest with golden acorns" (ONLY what was found)
+  - Question "What is my name again?" → Answer "Sarah" (ONLY the name, no extra commentary)
+
+Question: What is my name?
+--- END CONTEXT ---
 
 🤖: 
-Your name is Sarah.
 
-🔬 Confidence check: 100.0%
+Sarah
+
+🔍 RAW LLM RESPONSE: "Sarah"
+🔬 === VERIFICATION DEBUG ===
+🔬 Original question: "What is my name?"
+🔬 LLM response: "Sarah"
+🔬 Context text: "My name is Sarah. Oh, hi Sarah! It’s really nice to meet you. That’s a lovely name. So, Sarah – what brings you here today? Just browsing, or were you hoping to talk about something specific? 😊 Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland creatures and became the hero of the forest. Wow, that’s a fantastic story! Rusty the fox sounds like a really special character. A golden acorn treasure chest? That’s brilliant! Did he have any particular challenges while he was guarding the treasure, or was it all smooth sailing? 
+
+I love a good fairytale. It just made me think, what kind of forest was it like? Was it dark and mysterious, or bright and full of sunshine? And what were some of the other woodland creatures like? Did he have any friends who helped him? What was the fox's name in my story? Rusty"
+🔬 Question terms: [what, name]
+🔬 Question terms in context: [what, name]
+🔬 Question terms in response: []
+🔬 Question type detected: what_name
+🔬 Response matches question type: true
+🔬 Verified entities: [Sarah]
+🔬 Unverified entities: []
+🔬 Entity confidence: 100.0%
 🔬 Addresses question: true
+🔬 === END VERIFICATION ===
+✅ VERIFICATION PASSED - Returning LLM response
 ✨ (used 3 memories, fact_check_question, conf: 0.90)
 
 ============================================================
@@ -205,10 +309,10 @@ Press ENTER to proceed, or Ctrl+C to abort...
 💭 Processing: "Here's another story: In a distant kingdom, there lived a brave knight named Sir Marcus who protected a village from a terrible dragon. The dragon had been stealing sheep from the farmers, but Sir Marcus defeated it with his enchanted sword and saved the day."
 
 🤖: 
-general_conversation:0.8:The user is presenting a new story, indicating a shift in the conversation’s focus, rather than a specific query about characters or details.
+general_conversation:0.8:The user is introducing a new story, likely continuing a narrative they were building. It's a shift in content, so it’s not a direct question seeking information from the previous exchange. I’m curious to know where this new story is headed!
 
 🎯 Intent: general_conversation (confidence: 0.8) - general_conversation (learned classification)
-💡 Reasoning: The user is presenting a new story, indicating a shift in the conversation’s focus, rather than a specific query about characters or details.
+💡 Reasoning: The user is introducing a new story, likely continuing a narrative they were building. It's a shift in content, so it’s not a direct question seeking information from the previous exchange. I’m curious to know where this new story is headed!
 🔗 Detected continuation, boosting recent memory: "Hello there!..."
 🔗 Detected continuation, boosting recent memory: "My name is Sarah...."
 🔗 Detected continuation, boosting recent memory: "Let me tell you a story about ..."
@@ -216,24 +320,20 @@ general_conversation:0.8:The user is presenting a new story, indicating a shift 
 🔗 Detected continuation, boosting recent memory: "What did Rusty find in the for..."
 🔗 Detected continuation, boosting recent memory: "What is my name?..."
 🔍 Memory similarities:
-   1.351 (emb:0.313 ent:0.4 id:0.0 age:0.0 cnt:0.0 cont:0.6) [0min, 59chars]: "What did Rusty find in the forest?..."
-   1.323 (emb:0.272 ent:0.4 id:0.0 age:0.0 cnt:0.1 cont:0.6) [0min, 61chars]: "What was the fox's name in my story?..."
-   1.210 (emb:0.507 ent:0.0 id:0.0 age:0.0 cnt:0.1 cont:0.6) [0min, 506chars]: "Let me tell you a story about a clever f..."
+   1.222 (emb:0.507 ent:0.0 id:0.0 age:0.0 cnt:0.1 cont:0.6) [1min, 717chars]: "Let me tell you a story about a clever f..."
+   0.964 (emb:0.313 ent:0.0 id:0.0 age:0.0 cnt:0.1 cont:0.6) [0min, 69chars]: "What did Rusty find in the forest?..."
+   0.923 (emb:0.272 ent:0.0 id:0.0 age:0.0 cnt:0.1 cont:0.6) [0min, 41chars]: "What was the fox's name in my story?..."
 💬 Handling general conversation or request
 
 🤖: 
-“That’s a thrilling tale, Liam! A brave knight, a fearsome dragon, and a shining sword – it sounds like a classic adventure! 😊 It’s great to hear about Sir Marcus’s heroic deeds. 
+Oh, wow, that’s a really exciting story! A brave knight and a dragon – classic! Sir Marcus sounds like quite the hero. So, the dragon was stealing sheep? That’s awful! Did it just go around snatching them, or was there some kind of elaborate plan? And what was this enchanted sword like? Did it glow, or have any special powers besides just, you know, cutting things? 
 
-Do you want to:
-
-*   Chat about something?
-*   Get some information?
-*   Play a game?
-*   Just say hello?”
+It's funny thinking about Rusty the fox and this Sir Marcus. It’s like two completely different worlds! You know, what was the village like? Was it a cozy little place, or a bustling town? And did the people of the village really appreciate Sir Marcus after he saved them?
 
 ✨ (used 3 memories, general_conversation, conf: 0.80)
 
 ============================================================
+
 
 📝 Step 8/12
 Input: "Who was the knight in the second story?"
@@ -243,24 +343,71 @@ Press ENTER to proceed, or Ctrl+C to abort...
 💭 Processing: "Who was the knight in the second story?"
 
 🤖: 
-fact_check_question:0.9:The user is asking about a character in a story previously presented, similar to the previous input about the fox.
+fact_check_question:0.9:The user is inquiring about a specific character (Sir Marcus) introduced in the previous story, mirroring the previous fact-check question about Rusty.
 
 🎯 Intent: fact_check_question (confidence: 0.9) - fact_check_question (learned classification)
-💡 Reasoning: The user is asking about a character in a story previously presented, similar to the previous input about the fox.
+💡 Reasoning: The user is inquiring about a specific character (Sir Marcus) introduced in the previous story, mirroring the previous fact-check question about Rusty.
 🔍 Memory similarities:
-   0.660 (emb:0.326 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [0min, 61chars]: "What was the fox's name in my story?..."
-   0.635 (emb:0.302 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [0min, 547chars]: "Here's another story: In a distant kingd..."
-   0.524 (emb:0.274 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [1min, 506chars]: "Let me tell you a story about a clever f..."
+   0.718 (emb:0.302 ent:0.0 id:0.0 age:0.0 cnt:0.4 cont:0.0) [0min, 901chars]: "Here's another story: In a distant kingd..."
+   0.660 (emb:0.326 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [1min, 41chars]: "What was the fox's name in my story?..."
+   0.608 (emb:0.274 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [1min, 717chars]: "Let me tell you a story about a clever f..."
 🔍 Handling fact-check question about previous conversation
 🔍 Question terms: who, knight, second, story
 🔍 Context check: FOUND relevant content
-🔍 Context preview: "What was the fox's name in my story? The fox’s name was Rusty. Here's another story: In a distant ki..."
+🔍 Context preview: "Here's another story: In a distant kingdom, there lived a brave knight named Sir Marcus who protected a village from a terrible dragon. The dragon had been stealing sheep from the farmers, but Sir Mar..."
+🔍 Full context text: "Here's another story: In a distant kingdom, there lived a brave knight named Sir Marcus who protected a village from a terrible dragon. The dragon had been stealing sheep from the farmers, but Sir Marcus defeated it with his enchanted sword and saved the day. Oh, wow, that’s a really exciting story! A brave knight and a dragon – classic! Sir Marcus sounds like quite the hero. So, the dragon was stealing sheep? That’s awful! Did it just go around snatching them, or was there some kind of elaborate plan? And what was this enchanted sword like? Did it glow, or have any special powers besides just, you know, cutting things? 
+
+It's funny thinking about Rusty the fox and this Sir Marcus. It’s like two completely different worlds! You know, what was the village like? Was it a cozy little place, or a bustling town? And did the people of the village really appreciate Sir Marcus after he saved them? Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland creatures and became the hero of the forest. Wow, that’s a fantastic story! Rusty the fox sounds like a really special character. A golden acorn treasure chest? That’s brilliant! Did he have any particular challenges while he was guarding the treasure, or was it all smooth sailing? 
+
+I love a good fairytale. It just made me think, what kind of forest was it like? Was it dark and mysterious, or bright and full of sunshine? And what were some of the other woodland creatures like? Did he have any friends who helped him? What was the fox's name in my story? Rusty"
+🔍 SENDING TO LLM:
+Based on this conversation history:
+Previously: User said "Here's another story: In a distant kingdom, there lived a brave knight named Sir Marcus who protected a village from a terrible dragon. The dragon had been stealing sheep from the farmers, but Sir Marcus defeated it with his enchanted sword and saved the day." and you responded "Oh, wow, that’s a really exciting story! A brave knight and a dragon – classic! Sir Marcus sounds like quite the hero. So, the dragon was stealing sheep? That’s awful! Did it just go around snatching them, or was there some kind of elaborate plan? And what was this enchanted sword like? Did it glow, or have any special powers besides just, you know, cutting things? 
+
+It's funny thinking about Rusty the fox and this Sir Marcus. It’s like two completely different worlds! You know, what was the village like? Was it a cozy little place, or a bustling town? And did the people of the village really appreciate Sir Marcus after he saved them?"
+Previously: User said "Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland creatures and became the hero of the forest." and you responded "Wow, that’s a fantastic story! Rusty the fox sounds like a really special character. A golden acorn treasure chest? That’s brilliant! Did he have any particular challenges while he was guarding the treasure, or was it all smooth sailing? 
+
+I love a good fairytale. It just made me think, what kind of forest was it like? Was it dark and mysterious, or bright and full of sunshine? And what were some of the other woodland creatures like? Did he have any friends who helped him?"
+Previously: User said "What was the fox's name in my story?" and you responded "Rusty"
+
+CRITICAL INSTRUCTIONS - READ CAREFULLY:
+- You are answering a FACT-CHECK question, NOT having a conversation
+- Answer with ONLY the bare minimum fact requested - NO additional words
+- Do NOT add "Wow", "amazing", questions, commentary, or conversation
+- Do NOT be conversational, chatty, or ask follow-up questions
+- STOP after giving the fact - do not continue talking
+- If the specific answer isn't clearly stated in the conversation history, say "I don't recall that from our conversation"
+- Examples: 
+  - Question "What is my name?" → Answer "Sarah" (ONLY the name, no mention of stories or characters)
+  - Question "What did the fox find?" → Answer "A treasure chest with golden acorns" (ONLY what was found)
+  - Question "What is my name again?" → Answer "Sarah" (ONLY the name, no extra commentary)
+
+Question: Who was the knight in the second story?
+--- END CONTEXT ---
 
 🤖: 
-Sir Marcus was the knight in the second story.
+Sir Marcus
 
-🔬 Confidence check: 100.0%
+🔍 RAW LLM RESPONSE: "Sir Marcus"
+🔬 === VERIFICATION DEBUG ===
+🔬 Original question: "Who was the knight in the second story?"
+🔬 LLM response: "Sir Marcus"
+🔬 Context text: "Here's another story: In a distant kingdom, there lived a brave knight named Sir Marcus who protected a village from a terrible dragon. The dragon had been stealing sheep from the farmers, but Sir Marcus defeated it with his enchanted sword and saved the day. Oh, wow, that’s a really exciting story! A brave knight and a dragon – classic! Sir Marcus sounds like quite the hero. So, the dragon was stealing sheep? That’s awful! Did it just go around snatching them, or was there some kind of elaborate plan? And what was this enchanted sword like? Did it glow, or have any special powers besides just, you know, cutting things? 
+
+It's funny thinking about Rusty the fox and this Sir Marcus. It’s like two completely different worlds! You know, what was the village like? Was it a cozy little place, or a bustling town? And did the people of the village really appreciate Sir Marcus after he saved them? Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland creatures and became the hero of the forest. Wow, that’s a fantastic story! Rusty the fox sounds like a really special character. A golden acorn treasure chest? That’s brilliant! Did he have any particular challenges while he was guarding the treasure, or was it all smooth sailing? 
+
+I love a good fairytale. It just made me think, what kind of forest was it like? Was it dark and mysterious, or bright and full of sunshine? And what were some of the other woodland creatures like? Did he have any friends who helped him? What was the fox's name in my story? Rusty"
+🔬 Question terms: [who, knight, second, story]
+🔬 Question terms in context: [who, knight, story]
+🔬 Question terms in response: []
+🔬 Question type detected: who
+🔬 Response matches question type: true
+🔬 Verified entities: [Sir Marcus]
+🔬 Unverified entities: []
+🔬 Entity confidence: 100.0%
 🔬 Addresses question: true
+🔬 === END VERIFICATION ===
+✅ VERIFICATION PASSED - Returning LLM response
 ✨ (used 3 memories, fact_check_question, conf: 0.90)
 
 ============================================================
@@ -273,27 +420,75 @@ Press ENTER to proceed, or Ctrl+C to abort...
 💭 Processing: "What was the dragon stealing?"
 
 🤖: 
-fact_check_question:0.9:User is asking for a specific detail from the story ("In a distant kingdom..."), mirroring the previous fact-checking questions.
+fact_check_question:0.9:The user is asking for a specific detail from the story about Sir Marcus and the dragon. It’s a direct follow-up to the details already discussed.
 
 🎯 Intent: fact_check_question (confidence: 0.9) - fact_check_question (learned classification)
-💡 Reasoning: User is asking for a specific detail from the story ("In a distant kingdom..."), mirroring the previous fact-checking questions.
+💡 Reasoning: The user is asking for a specific detail from the story about Sir Marcus and the dragon. It’s a direct follow-up to the details already discussed.
 🔍 Memory similarities:
-   0.731 (emb:0.481 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [1min, 61chars]: "What was the fox's name in my story?..."
-   0.653 (emb:0.278 ent:0.0 id:0.0 age:0.0 cnt:0.4 cont:0.0) [0min, 547chars]: "Here's another story: In a distant kingd..."
-   0.557 (emb:0.307 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [1min, 59chars]: "What did Rusty find in the forest?..."
+   0.778 (emb:0.278 ent:0.0 id:0.0 age:0.0 cnt:0.5 cont:0.0) [0min, 901chars]: "Here's another story: In a distant kingd..."
+   0.731 (emb:0.481 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [1min, 41chars]: "What was the fox's name in my story?..."
+   0.516 (emb:0.266 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [0min, 49chars]: "Who was the knight in the second story?..."
 🔍 Handling fact-check question about previous conversation
 🔍 Question terms: what, dragon, stealing
 🔍 Context check: FOUND relevant content
-🔍 Context preview: "What was the fox's name in my story? The fox’s name was Rusty. Here's another story: In a distant ki..."
+🔍 Context preview: "Here's another story: In a distant kingdom, there lived a brave knight named Sir Marcus who protected a village from a terrible dragon. The dragon had been stealing sheep from the farmers, but Sir Mar..."
+🔍 Full context text: "Here's another story: In a distant kingdom, there lived a brave knight named Sir Marcus who protected a village from a terrible dragon. The dragon had been stealing sheep from the farmers, but Sir Marcus defeated it with his enchanted sword and saved the day. Oh, wow, that’s a really exciting story! A brave knight and a dragon – classic! Sir Marcus sounds like quite the hero. So, the dragon was stealing sheep? That’s awful! Did it just go around snatching them, or was there some kind of elaborate plan? And what was this enchanted sword like? Did it glow, or have any special powers besides just, you know, cutting things? 
+
+It's funny thinking about Rusty the fox and this Sir Marcus. It’s like two completely different worlds! You know, what was the village like? Was it a cozy little place, or a bustling town? And did the people of the village really appreciate Sir Marcus after he saved them? Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland creatures and became the hero of the forest. Wow, that’s a fantastic story! Rusty the fox sounds like a really special character. A golden acorn treasure chest? That’s brilliant! Did he have any particular challenges while he was guarding the treasure, or was it all smooth sailing? 
+
+I love a good fairytale. It just made me think, what kind of forest was it like? Was it dark and mysterious, or bright and full of sunshine? And what were some of the other woodland creatures like? Did he have any friends who helped him? What was the fox's name in my story? Rusty"
+🔍 SENDING TO LLM:
+Based on this conversation history:
+Previously: User said "Here's another story: In a distant kingdom, there lived a brave knight named Sir Marcus who protected a village from a terrible dragon. The dragon had been stealing sheep from the farmers, but Sir Marcus defeated it with his enchanted sword and saved the day." and you responded "Oh, wow, that’s a really exciting story! A brave knight and a dragon – classic! Sir Marcus sounds like quite the hero. So, the dragon was stealing sheep? That’s awful! Did it just go around snatching them, or was there some kind of elaborate plan? And what was this enchanted sword like? Did it glow, or have any special powers besides just, you know, cutting things? 
+
+It's funny thinking about Rusty the fox and this Sir Marcus. It’s like two completely different worlds! You know, what was the village like? Was it a cozy little place, or a bustling town? And did the people of the village really appreciate Sir Marcus after he saved them?"
+Previously: User said "Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland creatures and became the hero of the forest." and you responded "Wow, that’s a fantastic story! Rusty the fox sounds like a really special character. A golden acorn treasure chest? That’s brilliant! Did he have any particular challenges while he was guarding the treasure, or was it all smooth sailing? 
+
+I love a good fairytale. It just made me think, what kind of forest was it like? Was it dark and mysterious, or bright and full of sunshine? And what were some of the other woodland creatures like? Did he have any friends who helped him?"
+Previously: User said "What was the fox's name in my story?" and you responded "Rusty"
+
+CRITICAL INSTRUCTIONS - READ CAREFULLY:
+- You are answering a FACT-CHECK question, NOT having a conversation
+- Answer with ONLY the bare minimum fact requested - NO additional words
+- Do NOT add "Wow", "amazing", questions, commentary, or conversation
+- Do NOT be conversational, chatty, or ask follow-up questions
+- STOP after giving the fact - do not continue talking
+- If the specific answer isn't clearly stated in the conversation history, say "I don't recall that from our conversation"
+- Examples: 
+  - Question "What is my name?" → Answer "Sarah" (ONLY the name, no mention of stories or characters)
+  - Question "What did the fox find?" → Answer "A treasure chest with golden acorns" (ONLY what was found)
+  - Question "What is my name again?" → Answer "Sarah" (ONLY the name, no extra commentary)
+
+Question: What was the dragon stealing?
+--- END CONTEXT ---
 
 🤖: 
-The dragon had been stealing sheep from the farmers.
+Sheep
 
-🔬 Confidence check: 0.0%
+🔍 RAW LLM RESPONSE: "Sheep"
+🔬 === VERIFICATION DEBUG ===
+🔬 Original question: "What was the dragon stealing?"
+🔬 LLM response: "Sheep"
+🔬 Context text: "Here's another story: In a distant kingdom, there lived a brave knight named Sir Marcus who protected a village from a terrible dragon. The dragon had been stealing sheep from the farmers, but Sir Marcus defeated it with his enchanted sword and saved the day. Oh, wow, that’s a really exciting story! A brave knight and a dragon – classic! Sir Marcus sounds like quite the hero. So, the dragon was stealing sheep? That’s awful! Did it just go around snatching them, or was there some kind of elaborate plan? And what was this enchanted sword like? Did it glow, or have any special powers besides just, you know, cutting things? 
+
+It's funny thinking about Rusty the fox and this Sir Marcus. It’s like two completely different worlds! You know, what was the village like? Was it a cozy little place, or a bustling town? And did the people of the village really appreciate Sir Marcus after he saved them? Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland creatures and became the hero of the forest. Wow, that’s a fantastic story! Rusty the fox sounds like a really special character. A golden acorn treasure chest? That’s brilliant! Did he have any particular challenges while he was guarding the treasure, or was it all smooth sailing? 
+
+I love a good fairytale. It just made me think, what kind of forest was it like? Was it dark and mysterious, or bright and full of sunshine? And what were some of the other woodland creatures like? Did he have any friends who helped him? What was the fox's name in my story? Rusty"
+🔬 Question terms: [what, dragon, stealing]
+🔬 Question terms in context: [what, dragon, stealing]
+🔬 Question terms in response: []
+🔬 Question type detected: what_general
+🔬 Response matches question type: true
+🔬 Verified entities: [Sheep]
+🔬 Unverified entities: []
+🔬 Entity confidence: 100.0%
 🔬 Addresses question: true
+🔬 === END VERIFICATION ===
+✅ VERIFICATION PASSED - Returning LLM response
 ✨ (used 3 memories, fact_check_question, conf: 0.90)
 
 ============================================================
+
 
 📝 Step 10/12
 Input: "Which story was Ginger from?"
@@ -303,25 +498,72 @@ Press ENTER to proceed, or Ctrl+C to abort...
 💭 Processing: "Which story was Ginger from?"
 
 🤖: 
-fact_check_question:0.9:User is asking about a specific character (Ginger) mentioned in a previously shared story.
+fact_check_question:0.9:The user is asking for the story that Ginger was a part of, implying they want to know details about that story.
 
 🎯 Intent: fact_check_question (confidence: 0.9) - fact_check_question (learned classification)
-💡 Reasoning: User is asking about a specific character (Ginger) mentioned in a previously shared story.
+💡 Reasoning: The user is asking for the story that Ginger was a part of, implying they want to know details about that story.
 🔍 Memory similarities:
-   0.484 (emb:0.234 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [1min, 547chars]: "Here's another story: In a distant kingd..."
-   0.376 (emb:0.126 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [0min, 81chars]: "What was the dragon stealing?..."
-   0.343 (emb:0.093 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [1min, 61chars]: "What was the fox's name in my story?..."
+   0.609 (emb:0.234 ent:0.0 id:0.0 age:0.0 cnt:0.4 cont:0.0) [0min, 901chars]: "Here's another story: In a distant kingd..."
+   0.462 (emb:0.212 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [1min, 717chars]: "Let me tell you a story about a clever f..."
+   0.343 (emb:0.093 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [1min, 41chars]: "What was the fox's name in my story?..."
 🔍 Handling fact-check question about previous conversation
 🔍 Question terms: which, story, ginger
 🔍 Context check: FOUND relevant content
-🔍 Context preview: "Here's another story: In a distant kingdom, there lived a brave knight named Sir Marcus who protecte..."
+🔍 Context preview: "Here's another story: In a distant kingdom, there lived a brave knight named Sir Marcus who protected a village from a terrible dragon. The dragon had been stealing sheep from the farmers, but Sir Mar..."
+🔍 Full context text: "Here's another story: In a distant kingdom, there lived a brave knight named Sir Marcus who protected a village from a terrible dragon. The dragon had been stealing sheep from the farmers, but Sir Marcus defeated it with his enchanted sword and saved the day. Oh, wow, that’s a really exciting story! A brave knight and a dragon – classic! Sir Marcus sounds like quite the hero. So, the dragon was stealing sheep? That’s awful! Did it just go around snatching them, or was there some kind of elaborate plan? And what was this enchanted sword like? Did it glow, or have any special powers besides just, you know, cutting things? 
+
+It's funny thinking about Rusty the fox and this Sir Marcus. It’s like two completely different worlds! You know, what was the village like? Was it a cozy little place, or a bustling town? And did the people of the village really appreciate Sir Marcus after he saved them? Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland creatures and became the hero of the forest. Wow, that’s a fantastic story! Rusty the fox sounds like a really special character. A golden acorn treasure chest? That’s brilliant! Did he have any particular challenges while he was guarding the treasure, or was it all smooth sailing? 
+
+I love a good fairytale. It just made me think, what kind of forest was it like? Was it dark and mysterious, or bright and full of sunshine? And what were some of the other woodland creatures like? Did he have any friends who helped him? What was the fox's name in my story? Rusty"
+🔍 SENDING TO LLM:
+Based on this conversation history:
+Previously: User said "Here's another story: In a distant kingdom, there lived a brave knight named Sir Marcus who protected a village from a terrible dragon. The dragon had been stealing sheep from the farmers, but Sir Marcus defeated it with his enchanted sword and saved the day." and you responded "Oh, wow, that’s a really exciting story! A brave knight and a dragon – classic! Sir Marcus sounds like quite the hero. So, the dragon was stealing sheep? That’s awful! Did it just go around snatching them, or was there some kind of elaborate plan? And what was this enchanted sword like? Did it glow, or have any special powers besides just, you know, cutting things? 
+
+It's funny thinking about Rusty the fox and this Sir Marcus. It’s like two completely different worlds! You know, what was the village like? Was it a cozy little place, or a bustling town? And did the people of the village really appreciate Sir Marcus after he saved them?"
+Previously: User said "Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland creatures and became the hero of the forest." and you responded "Wow, that’s a fantastic story! Rusty the fox sounds like a really special character. A golden acorn treasure chest? That’s brilliant! Did he have any particular challenges while he was guarding the treasure, or was it all smooth sailing? 
+
+I love a good fairytale. It just made me think, what kind of forest was it like? Was it dark and mysterious, or bright and full of sunshine? And what were some of the other woodland creatures like? Did he have any friends who helped him?"
+Previously: User said "What was the fox's name in my story?" and you responded "Rusty"
+
+CRITICAL INSTRUCTIONS - READ CAREFULLY:
+- You are answering a FACT-CHECK question, NOT having a conversation
+- Answer with ONLY the bare minimum fact requested - NO additional words
+- Do NOT add "Wow", "amazing", questions, commentary, or conversation
+- Do NOT be conversational, chatty, or ask follow-up questions
+- STOP after giving the fact - do not continue talking
+- If the specific answer isn't clearly stated in the conversation history, say "I don't recall that from our conversation"
+- Examples: 
+  - Question "What is my name?" → Answer "Sarah" (ONLY the name, no mention of stories or characters)
+  - Question "What did the fox find?" → Answer "A treasure chest with golden acorns" (ONLY what was found)
+  - Question "What is my name again?" → Answer "Sarah" (ONLY the name, no extra commentary)
+
+Question: Which story was Ginger from?
+--- END CONTEXT ---
 
 🤖: 
-I don't recall that from our conversation.
 
-🔬 Confidence check: 0.0%
-🔬 Addresses question: false
-❌ Low confidence or irrelevant response detected, providing uncertain response
+I don’t recall that from our conversation
+
+🔍 RAW LLM RESPONSE: "I don’t recall that from our conversation"
+🔬 === VERIFICATION DEBUG ===
+🔬 Original question: "Which story was Ginger from?"
+🔬 LLM response: "I don’t recall that from our conversation"
+🔬 Context text: "Here's another story: In a distant kingdom, there lived a brave knight named Sir Marcus who protected a village from a terrible dragon. The dragon had been stealing sheep from the farmers, but Sir Marcus defeated it with his enchanted sword and saved the day. Oh, wow, that’s a really exciting story! A brave knight and a dragon – classic! Sir Marcus sounds like quite the hero. So, the dragon was stealing sheep? That’s awful! Did it just go around snatching them, or was there some kind of elaborate plan? And what was this enchanted sword like? Did it glow, or have any special powers besides just, you know, cutting things? 
+
+It's funny thinking about Rusty the fox and this Sir Marcus. It’s like two completely different worlds! You know, what was the village like? Was it a cozy little place, or a bustling town? And did the people of the village really appreciate Sir Marcus after he saved them? Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland creatures and became the hero of the forest. Wow, that’s a fantastic story! Rusty the fox sounds like a really special character. A golden acorn treasure chest? That’s brilliant! Did he have any particular challenges while he was guarding the treasure, or was it all smooth sailing? 
+
+I love a good fairytale. It just made me think, what kind of forest was it like? Was it dark and mysterious, or bright and full of sunshine? And what were some of the other woodland creatures like? Did he have any friends who helped him? What was the fox's name in my story? Rusty"
+🔬 Question terms: [which, story, ginger]
+🔬 Question terms in context: [story]
+🔬 Question terms in response: []
+🔬 Question type detected: general
+🔬 Response matches question type: true
+🔬 Verified entities: []
+🔬 Unverified entities: []
+🔬 Entity confidence: 0.0%
+🔬 Addresses question: true
+🔬 === END VERIFICATION ===
+✅ VERIFICATION PASSED - Returning LLM response
 ✨ (used 3 memories, fact_check_question, conf: 0.90)
 
 ============================================================
@@ -334,25 +576,72 @@ Press ENTER to proceed, or Ctrl+C to abort...
 💭 Processing: "Which story was Selly from?"
 
 🤖: 
-fact_check_question:0.9:User is asking about the origin of a character from the previous story discussion.
+fact_check_question:0.9:The user is asking about a character’s origin, fitting the pattern of previous fact-checking questions about characters in the stories.
 
 🎯 Intent: fact_check_question (confidence: 0.9) - fact_check_question (learned classification)
-💡 Reasoning: User is asking about the origin of a character from the previous story discussion.
+💡 Reasoning: The user is asking about a character’s origin, fitting the pattern of previous fact-checking questions about characters in the stories.
 🔍 Memory similarities:
-   0.953 (emb:0.578 ent:0.0 id:0.0 age:0.0 cnt:0.4 cont:0.0) [0min, 80chars]: "Which story was Ginger from?..."
-   0.494 (emb:0.244 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [1min, 547chars]: "Here's another story: In a distant kingd..."
-   0.404 (emb:0.279 ent:0.0 id:0.0 age:0.0 cnt:0.1 cont:0.0) [1min, 506chars]: "Let me tell you a story about a clever f..."
+   0.953 (emb:0.578 ent:0.0 id:0.0 age:0.0 cnt:0.4 cont:0.0) [0min, 69chars]: "Which story was Ginger from?..."
+   0.619 (emb:0.244 ent:0.0 id:0.0 age:0.0 cnt:0.4 cont:0.0) [0min, 901chars]: "Here's another story: In a distant kingd..."
+   0.529 (emb:0.279 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [1min, 717chars]: "Let me tell you a story about a clever f..."
 🔍 Handling fact-check question about previous conversation
 🔍 Question terms: which, story, selly
 🔍 Context check: FOUND relevant content
-🔍 Context preview: "Which story was Ginger from? I don't have that information from our conversation. Here's another sto..."
+🔍 Context preview: "Which story was Ginger from? I don’t recall that from our conversation Here's another story: In a distant kingdom, there lived a brave knight named Sir Marcus who protected a village from a terrible d..."
+🔍 Full context text: "Which story was Ginger from? I don’t recall that from our conversation Here's another story: In a distant kingdom, there lived a brave knight named Sir Marcus who protected a village from a terrible dragon. The dragon had been stealing sheep from the farmers, but Sir Marcus defeated it with his enchanted sword and saved the day. Oh, wow, that’s a really exciting story! A brave knight and a dragon – classic! Sir Marcus sounds like quite the hero. So, the dragon was stealing sheep? That’s awful! Did it just go around snatching them, or was there some kind of elaborate plan? And what was this enchanted sword like? Did it glow, or have any special powers besides just, you know, cutting things? 
+
+It's funny thinking about Rusty the fox and this Sir Marcus. It’s like two completely different worlds! You know, what was the village like? Was it a cozy little place, or a bustling town? And did the people of the village really appreciate Sir Marcus after he saved them? Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland creatures and became the hero of the forest. Wow, that’s a fantastic story! Rusty the fox sounds like a really special character. A golden acorn treasure chest? That’s brilliant! Did he have any particular challenges while he was guarding the treasure, or was it all smooth sailing? 
+
+I love a good fairytale. It just made me think, what kind of forest was it like? Was it dark and mysterious, or bright and full of sunshine? And what were some of the other woodland creatures like? Did he have any friends who helped him?"
+🔍 SENDING TO LLM:
+Based on this conversation history:
+Previously: User said "Which story was Ginger from?" and you responded "I don’t recall that from our conversation"
+Previously: User said "Here's another story: In a distant kingdom, there lived a brave knight named Sir Marcus who protected a village from a terrible dragon. The dragon had been stealing sheep from the farmers, but Sir Marcus defeated it with his enchanted sword and saved the day." and you responded "Oh, wow, that’s a really exciting story! A brave knight and a dragon – classic! Sir Marcus sounds like quite the hero. So, the dragon was stealing sheep? That’s awful! Did it just go around snatching them, or was there some kind of elaborate plan? And what was this enchanted sword like? Did it glow, or have any special powers besides just, you know, cutting things? 
+
+It's funny thinking about Rusty the fox and this Sir Marcus. It’s like two completely different worlds! You know, what was the village like? Was it a cozy little place, or a bustling town? And did the people of the village really appreciate Sir Marcus after he saved them?"
+Previously: User said "Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland creatures and became the hero of the forest." and you responded "Wow, that’s a fantastic story! Rusty the fox sounds like a really special character. A golden acorn treasure chest? That’s brilliant! Did he have any particular challenges while he was guarding the treasure, or was it all smooth sailing? 
+
+I love a good fairytale. It just made me think, what kind of forest was it like? Was it dark and mysterious, or bright and full of sunshine? And what were some of the other woodland creatures like? Did he have any friends who helped him?"
+
+CRITICAL INSTRUCTIONS - READ CAREFULLY:
+- You are answering a FACT-CHECK question, NOT having a conversation
+- Answer with ONLY the bare minimum fact requested - NO additional words
+- Do NOT add "Wow", "amazing", questions, commentary, or conversation
+- Do NOT be conversational, chatty, or ask follow-up questions
+- STOP after giving the fact - do not continue talking
+- If the specific answer isn't clearly stated in the conversation history, say "I don't recall that from our conversation"
+- Examples: 
+  - Question "What is my name?" → Answer "Sarah" (ONLY the name, no mention of stories or characters)
+  - Question "What did the fox find?" → Answer "A treasure chest with golden acorns" (ONLY what was found)
+  - Question "What is my name again?" → Answer "Sarah" (ONLY the name, no extra commentary)
+
+Question: Which story was Selly from?
+--- END CONTEXT ---
 
 🤖: 
-I don't recall that from our conversation
 
-🔬 Confidence check: 0.0%
-🔬 Addresses question: false
-❌ Low confidence or irrelevant response detected, providing uncertain response
+I don’t recall that from our conversation
+
+🔍 RAW LLM RESPONSE: "I don’t recall that from our conversation"
+🔬 === VERIFICATION DEBUG ===
+🔬 Original question: "Which story was Selly from?"
+🔬 LLM response: "I don’t recall that from our conversation"
+🔬 Context text: "Which story was Ginger from? I don’t recall that from our conversation Here's another story: In a distant kingdom, there lived a brave knight named Sir Marcus who protected a village from a terrible dragon. The dragon had been stealing sheep from the farmers, but Sir Marcus defeated it with his enchanted sword and saved the day. Oh, wow, that’s a really exciting story! A brave knight and a dragon – classic! Sir Marcus sounds like quite the hero. So, the dragon was stealing sheep? That’s awful! Did it just go around snatching them, or was there some kind of elaborate plan? And what was this enchanted sword like? Did it glow, or have any special powers besides just, you know, cutting things? 
+
+It's funny thinking about Rusty the fox and this Sir Marcus. It’s like two completely different worlds! You know, what was the village like? Was it a cozy little place, or a bustling town? And did the people of the village really appreciate Sir Marcus after he saved them? Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland creatures and became the hero of the forest. Wow, that’s a fantastic story! Rusty the fox sounds like a really special character. A golden acorn treasure chest? That’s brilliant! Did he have any particular challenges while he was guarding the treasure, or was it all smooth sailing? 
+
+I love a good fairytale. It just made me think, what kind of forest was it like? Was it dark and mysterious, or bright and full of sunshine? And what were some of the other woodland creatures like? Did he have any friends who helped him?"
+🔬 Question terms: [which, story, selly]
+🔬 Question terms in context: [which, story]
+🔬 Question terms in response: []
+🔬 Question type detected: general
+🔬 Response matches question type: true
+🔬 Verified entities: []
+🔬 Unverified entities: []
+🔬 Entity confidence: 0.0%
+🔬 Addresses question: true
+🔬 === END VERIFICATION ===
+✅ VERIFICATION PASSED - Returning LLM response
 ✨ (used 3 memories, fact_check_question, conf: 0.90)
 
 ============================================================
@@ -365,27 +654,69 @@ Press ENTER to proceed, or Ctrl+C to abort...
 💭 Processing: "What is my name again?"
 
 🤖: 
-fact_check_question:0.8:The user is likely repeating a previous question (regarding their name) to confirm the assistant's response or to clarify the context of the conversation, given the previous questions about character names.
+fact_check_question:0.8:The user is likely trying to recall their own name, a detail potentially mentioned earlier in the conversation, given the previous questions about characters. It’s a follow-up on a previous request.
 
 🎯 Intent: fact_check_question (confidence: 0.8) - fact_check_question (learned classification)
-💡 Reasoning: The user is likely repeating a previous question (regarding their name) to confirm the assistant's response or to clarify the context of the conversation, given the previous questions about character names.
+💡 Reasoning: The user is likely trying to recall their own name, a detail potentially mentioned earlier in the conversation, given the previous questions about characters. It’s a follow-up on a previous request.
 🔍 Memory similarities:
-   1.115 (emb:0.065 ent:0.0 id:0.8 age:0.0 cnt:0.3 cont:0.0) [1min, 294chars]: "My name is Sarah...."
-   0.848 (emb:0.598 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [1min, 35chars]: "What is my name?..."
-   0.602 (emb:0.602 ent:0.0 id:0.0 age:0.0 cnt:0.0 cont:0.0) [1min, 81chars]: "What was the dragon stealing?..."
+   1.115 (emb:0.065 ent:0.0 id:0.8 age:0.0 cnt:0.3 cont:0.0) [1min, 193chars]: "My name is Sarah...."
+   0.848 (emb:0.598 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [1min, 21chars]: "What is my name?..."
+   0.602 (emb:0.602 ent:0.0 id:0.0 age:0.0 cnt:0.0 cont:0.0) [0min, 34chars]: "What was the dragon stealing?..."
 🔍 Handling fact-check question about previous conversation
 🔍 Question terms: what, name, again
 🔍 Context check: FOUND relevant content
-🔍 Context preview: "My name is Sarah. “Hello Sarah! It’s lovely to meet you. 😊 So nice to finally put a name to the fri..."
+🔍 Context preview: "My name is Sarah. Oh, hi Sarah! It’s really nice to meet you. That’s a lovely name. So, Sarah – what brings you here today? Just browsing, or were you hoping to talk about something specific? 😊 Here'..."
+🔍 Full context text: "My name is Sarah. Oh, hi Sarah! It’s really nice to meet you. That’s a lovely name. So, Sarah – what brings you here today? Just browsing, or were you hoping to talk about something specific? 😊 Here's another story: In a distant kingdom, there lived a brave knight named Sir Marcus who protected a village from a terrible dragon. The dragon had been stealing sheep from the farmers, but Sir Marcus defeated it with his enchanted sword and saved the day. Oh, wow, that’s a really exciting story! A brave knight and a dragon – classic! Sir Marcus sounds like quite the hero. So, the dragon was stealing sheep? That’s awful! Did it just go around snatching them, or was there some kind of elaborate plan? And what was this enchanted sword like? Did it glow, or have any special powers besides just, you know, cutting things? 
+
+It's funny thinking about Rusty the fox and this Sir Marcus. It’s like two completely different worlds! You know, what was the village like? Was it a cozy little place, or a bustling town? And did the people of the village really appreciate Sir Marcus after he saved them? What is my name? Sarah"
+🔍 SENDING TO LLM:
+Based on this conversation history:
+Previously: User said "My name is Sarah." and you responded "Oh, hi Sarah! It’s really nice to meet you. That’s a lovely name. So, Sarah – what brings you here today? Just browsing, or were you hoping to talk about something specific? 😊"
+Previously: User said "Here's another story: In a distant kingdom, there lived a brave knight named Sir Marcus who protected a village from a terrible dragon. The dragon had been stealing sheep from the farmers, but Sir Marcus defeated it with his enchanted sword and saved the day." and you responded "Oh, wow, that’s a really exciting story! A brave knight and a dragon – classic! Sir Marcus sounds like quite the hero. So, the dragon was stealing sheep? That’s awful! Did it just go around snatching them, or was there some kind of elaborate plan? And what was this enchanted sword like? Did it glow, or have any special powers besides just, you know, cutting things? 
+
+It's funny thinking about Rusty the fox and this Sir Marcus. It’s like two completely different worlds! You know, what was the village like? Was it a cozy little place, or a bustling town? And did the people of the village really appreciate Sir Marcus after he saved them?"
+Previously: User said "What is my name?" and you responded "Sarah"
+
+CRITICAL INSTRUCTIONS - READ CAREFULLY:
+- You are answering a FACT-CHECK question, NOT having a conversation
+- Answer with ONLY the bare minimum fact requested - NO additional words
+- Do NOT add "Wow", "amazing", questions, commentary, or conversation
+- Do NOT be conversational, chatty, or ask follow-up questions
+- STOP after giving the fact - do not continue talking
+- If the specific answer isn't clearly stated in the conversation history, say "I don't recall that from our conversation"
+- Examples: 
+  - Question "What is my name?" → Answer "Sarah" (ONLY the name, no mention of stories or characters)
+  - Question "What did the fox find?" → Answer "A treasure chest with golden acorns" (ONLY what was found)
+  - Question "What is my name again?" → Answer "Sarah" (ONLY the name, no extra commentary)
+
+Question: What is my name again?
+--- END CONTEXT ---
 
 🤖: 
-Your name is Sarah.
+Sarah
 
-🔬 Confidence check: 100.0%
+🔍 RAW LLM RESPONSE: "Sarah"
+🔬 === VERIFICATION DEBUG ===
+🔬 Original question: "What is my name again?"
+🔬 LLM response: "Sarah"
+🔬 Context text: "My name is Sarah. Oh, hi Sarah! It’s really nice to meet you. That’s a lovely name. So, Sarah – what brings you here today? Just browsing, or were you hoping to talk about something specific? 😊 Here's another story: In a distant kingdom, there lived a brave knight named Sir Marcus who protected a village from a terrible dragon. The dragon had been stealing sheep from the farmers, but Sir Marcus defeated it with his enchanted sword and saved the day. Oh, wow, that’s a really exciting story! A brave knight and a dragon – classic! Sir Marcus sounds like quite the hero. So, the dragon was stealing sheep? That’s awful! Did it just go around snatching them, or was there some kind of elaborate plan? And what was this enchanted sword like? Did it glow, or have any special powers besides just, you know, cutting things? 
+
+It's funny thinking about Rusty the fox and this Sir Marcus. It’s like two completely different worlds! You know, what was the village like? Was it a cozy little place, or a bustling town? And did the people of the village really appreciate Sir Marcus after he saved them? What is my name? Sarah"
+🔬 Question terms: [what, name, again]
+🔬 Question terms in context: [what, name]
+🔬 Question terms in response: []
+🔬 Question type detected: what_name
+🔬 Response matches question type: true
+🔬 Verified entities: [Sarah]
+🔬 Unverified entities: []
+🔬 Entity confidence: 100.0%
 🔬 Addresses question: true
+🔬 === END VERIFICATION ===
+✅ VERIFICATION PASSED - Returning LLM response
 ✨ (used 3 memories, fact_check_question, conf: 0.80)
 
 ============================================================
+
 
 ✅ CALIBRATION COMPLETE!
 All tests have been run. Review the responses above to verify:
@@ -398,27 +729,81 @@ All tests have been run. Review the responses above to verify:
 📊 Final Stats: {
   "totalMemories": 12,
   "avgPerformance": 0.5,
-  "memoryUsage": 6829,
+  "memoryUsage": 7450,
   "conversations": 12,
   "intentBreakdown": {
     "social_interaction": 1,
-    "information_providing": 2,
+    "information_providing": 1,
+    "INTENT_TYPE": 1,
     "fact_check_question": 8,
     "general_conversation": 1
   },
   "learningMetrics": {
     "totalClassifications": 11,
     "intentBreakdown": {
-      "information_providing": 2,
+      "information_providing": 1,
+      "INTENT_TYPE": 1,
       "fact_check_question": 8,
       "general_conversation": 1
     },
     "successRates": {
       "information_providing": "0.0%",
+      "INTENT_TYPE": "0.0%",
       "fact_check_question": "0.0%",
       "general_conversation": "0.0%"
     },
-    "learnedPatterns": 0
+    "learnedPatterns": 0,
+    "preferences": {
+      "total": 0,
+      "active": 0,
+      "types": []
+    },
+    "topics": {
+      "total": 0,
+      "categories": [],
+      "preferences": {}
+    }
   },
-  "lastActivity": "6/19/2025, 10:37:34 PM"
+  "lastActivity": "6/20/2025, 6:02:32 AM"
+}
+
+📊 Final Stats: {
+  "totalMemories": 12,
+  "avgPerformance": 0.5,
+  "memoryUsage": 7450,
+  "conversations": 12,
+  "intentBreakdown": {
+    "social_interaction": 1,
+    "information_providing": 1,
+    "INTENT_TYPE": 1,
+    "fact_check_question": 8,
+    "general_conversation": 1
+  },
+  "learningMetrics": {
+    "totalClassifications": 11,
+    "intentBreakdown": {
+      "information_providing": 1,
+      "INTENT_TYPE": 1,
+      "fact_check_question": 8,
+      "general_conversation": 1
+    },
+    "successRates": {
+      "information_providing": "0.0%",
+      "INTENT_TYPE": "0.0%",
+      "fact_check_question": "0.0%",
+      "general_conversation": "0.0%"
+    },
+    "learnedPatterns": 0,
+    "preferences": {
+      "total": 0,
+      "active": 0,
+      "types": []
+    },
+    "topics": {
+      "total": 0,
+      "categories": [],
+      "preferences": {}
+    }
+  },
+  "lastActivity": "6/20/2025, 6:02:32 AM"
 }

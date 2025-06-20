@@ -1,0 +1,424 @@
+🚀 Initializing Memory-Enhanced LLM...
+🔌 Testing Ollama connection...
+✅ Ollama connection working
+🧠 Initializing Memory System...
+📝 No existing memories found, starting fresh
+✅ Memory System ready
+🎯 Memory-Enhanced LLM ready!
+
+🧪 CALIBRATION MODE
+==================
+This will run through a test sequence to verify memory and hallucination detection.
+Press ENTER to proceed with each step, or Ctrl+C to abort.
+
+
+📝 Step 1/12
+Input: "Hello there!"
+Press ENTER to proceed, or Ctrl+C to abort...
+ 
+
+💭 Processing: "Hello there!"
+🎯 Intent: social_interaction (confidence: 0.8) - Social interaction (basic classification)
+💡 Reasoning: Short greeting/thanks
+👋 Handling social interaction
+
+🤖: 
+Hello to you too! 😊 How's your day going so far? Is there anything I can help you with today? 
+
+Do you want to:
+
+*   Chat about something?
+*   Get some information?
+*   Play a game?
+*   Just say hello?
+
+🆕 (new memory created, social_interaction, conf: 0.80)
+
+============================================================
+
+📝 Step 2/12
+Input: "My name is Sarah."
+Press ENTER to proceed, or Ctrl+C to abort...
+ 
+
+💭 Processing: "My name is Sarah."
+
+🤖: 
+information_providing:0.9:User is providing personal information (name), which is a common form of information sharing.
+
+🎯 Intent: information_providing (confidence: 0.9) - information_providing (learned classification)
+💡 Reasoning: User is providing personal information (name), which is a common form of information sharing.
+🔗 Detected continuation, boosting recent memory: "Hello there!..."
+🔍 Memory similarities:
+   0.665 (emb:0.065 ent:0.0 id:0.0 age:0.0 cnt:0.0 cont:0.6) [0min, 214chars]: "Hello there!..."
+📝 Acknowledging information provided by user
+
+🤖: 
+“Hello Sarah! It’s lovely to meet you. 😊 So nice to finally put a name to the friendly voice! How’s your day going so far? Is there anything I can help you with today? 
+
+Do you want to:
+
+*   Chat about something?
+*   Get some information?
+*   Play a game?
+*   Just say hello?”
+
+✨ (used 1 memories, information_providing, conf: 0.90)
+
+============================================================
+
+
+📝 Step 3/12
+Input: "Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland creatures and became the hero of the forest."
+Press ENTER to proceed, or Ctrl+C to abort...
+ 
+
+💭 Processing: "Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he discovered a hidden treasure chest filled with golden acorns. He shared them with all the woodland creatures and became the hero of the forest."
+
+🤖: 
+information_providing:0.9:User is sharing a narrative, fulfilling the "Chat about something?" option presented by the assistant.
+
+🎯 Intent: information_providing (confidence: 0.9) - information_providing (learned classification)
+💡 Reasoning: User is sharing a narrative, fulfilling the "Chat about something?" option presented by the assistant.
+🔗 Detected continuation, boosting recent memory: "Hello there!..."
+🔗 Detected continuation, boosting recent memory: "My name is Sarah...."
+🔍 Memory similarities:
+   0.970 (emb:0.256 ent:0.0 id:0.0 age:0.0 cnt:0.1 cont:0.6) [0min, 294chars]: "My name is Sarah...."
+   0.868 (emb:0.168 ent:0.0 id:0.0 age:0.0 cnt:0.1 cont:0.6) [0min, 214chars]: "Hello there!..."
+📝 Acknowledging information provided by user
+
+🤖: 
+“Wow, that sounds like a wonderful story, Sarah! A clever fox and a treasure of golden acorns – what a fantastic adventure! 😊 That’s a really charming tale. 
+
+Do you want to:
+
+*   Chat about something?
+*   Get some information?
+*   Play a game?
+*   Just say hello?”
+
+✨ (used 2 memories, information_providing, conf: 0.90)
+
+============================================================
+
+📝 Step 4/12
+Input: "What was the fox's name in my story?"
+Press ENTER to proceed, or Ctrl+C to abort...
+ 
+
+💭 Processing: "What was the fox's name in my story?"
+
+🤖: 
+fact_check_question:0.9:User is asking for a specific detail (the fox's name) from the story they just told.
+
+🎯 Intent: fact_check_question (confidence: 0.9) - fact_check_question (learned classification)
+💡 Reasoning: User is asking for a specific detail (the fox's name) from the story they just told.
+🔍 Memory similarities:
+   0.595 (emb:0.295 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [0min, 506chars]: "Let me tell you a story about a clever f..."
+   0.325 (emb:0.125 ent:0.0 id:0.0 age:0.0 cnt:0.2 cont:0.0) [0min, 294chars]: "My name is Sarah...."
+   0.177 (emb:0.077 ent:0.0 id:0.0 age:0.0 cnt:0.1 cont:0.0) [0min, 214chars]: "Hello there!..."
+🔍 Handling fact-check question about previous conversation
+🔍 Question terms: what, fox, name, story
+🔍 Context check: FOUND relevant content
+🔍 Context preview: "Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he dis..."
+
+🤖: 
+The fox’s name was Rusty.
+
+🔬 Confidence check: 100.0%
+🔬 Addresses question: true
+✨ (used 3 memories, fact_check_question, conf: 0.90)
+
+============================================================
+
+
+📝 Step 5/12
+Input: "What did Rusty find in the forest?"
+Press ENTER to proceed, or Ctrl+C to abort...
+ 
+
+💭 Processing: "What did Rusty find in the forest?"
+
+🤖: 
+fact_check_question:0.9:User is asking for a specific detail (the treasure Rusty found) from a previously shared story.
+
+🎯 Intent: fact_check_question (confidence: 0.9) - fact_check_question (learned classification)
+💡 Reasoning: User is asking for a specific detail (the treasure Rusty found) from a previously shared story.
+🔍 Memory similarities:
+   0.997 (emb:0.297 ent:0.4 id:0.0 age:0.0 cnt:0.3 cont:0.0) [0min, 506chars]: "Let me tell you a story about a clever f..."
+   0.941 (emb:0.341 ent:0.4 id:0.0 age:0.0 cnt:0.2 cont:0.0) [0min, 61chars]: "What was the fox's name in my story?..."
+   0.219 (emb:0.119 ent:0.0 id:0.0 age:0.0 cnt:0.1 cont:0.0) [0min, 294chars]: "My name is Sarah...."
+🔍 Handling fact-check question about previous conversation
+🔍 Question terms: what, rusty, find, forest
+🔍 Context check: FOUND relevant content
+🔍 Context preview: "Let me tell you a story about a clever fox named Rusty. Rusty lived in a magical forest where he dis..."
+
+🤖: 
+The fox’s name was Rusty.
+
+🔬 Confidence check: 100.0%
+🔬 Addresses question: true
+✨ (used 3 memories, fact_check_question, conf: 0.90)
+
+============================================================
+
+📝 Step 6/12
+Input: "What is my name?"
+Press ENTER to proceed, or Ctrl+C to abort...
+ 
+
+💭 Processing: "What is my name?"
+
+🤖: 
+fact_check_question:0.9:The user is asking for information related to their identity, which aligns with recalling details from a previously shared story and confirming information.
+
+🎯 Intent: fact_check_question (confidence: 0.9) - fact_check_question (learned classification)
+💡 Reasoning: The user is asking for information related to their identity, which aligns with recalling details from a previously shared story and confirming information.
+🔗 Detected continuation, boosting recent memory: "Hello there!..."
+🔗 Detected continuation, boosting recent memory: "My name is Sarah...."
+🔗 Detected continuation, boosting recent memory: "Let me tell you a story about ..."
+🔗 Detected continuation, boosting recent memory: "What was the fox's name in my ..."
+🔗 Detected continuation, boosting recent memory: "What did Rusty find in the for..."
+🔍 Memory similarities:
+   2.010 (emb:0.110 ent:0.0 id:0.8 age:0.0 cnt:0.5 cont:0.6) [0min, 294chars]: "My name is Sarah...."
+   1.473 (emb:0.373 ent:0.0 id:0.0 age:0.0 cnt:0.5 cont:0.6) [0min, 61chars]: "What was the fox's name in my story?..."
+   1.408 (emb:0.308 ent:0.0 id:0.0 age:0.0 cnt:0.5 cont:0.6) [0min, 59chars]: "What did Rusty find in the forest?..."
+🔍 Handling fact-check question about previous conversation
+🔍 Question terms: what, name
+🔍 Context check: FOUND relevant content
+🔍 Context preview: "My name is Sarah. “Hello Sarah! It’s lovely to meet you. 😊 So nice to finally put a name to the fri..."
+
+🤖: 
+Your name is Sarah.
+
+🔬 Confidence check: 100.0%
+🔬 Addresses question: true
+✨ (used 3 memories, fact_check_question, conf: 0.90)
+
+============================================================
+
+📝 Step 7/12
+Input: "Here's another story: In a distant kingdom, there lived a brave knight named Sir Marcus who protected a village from a terrible dragon. The dragon had been stealing sheep from the farmers, but Sir Marcus defeated it with his enchanted sword and saved the day."
+Press ENTER to proceed, or Ctrl+C to abort...
+ 
+
+💭 Processing: "Here's another story: In a distant kingdom, there lived a brave knight named Sir Marcus who protected a village from a terrible dragon. The dragon had been stealing sheep from the farmers, but Sir Marcus defeated it with his enchanted sword and saved the day."
+
+🤖: 
+general_conversation:0.8:The user is presenting a new story, indicating a shift in the conversation’s focus, rather than a specific query about characters or details.
+
+🎯 Intent: general_conversation (confidence: 0.8) - general_conversation (learned classification)
+💡 Reasoning: The user is presenting a new story, indicating a shift in the conversation’s focus, rather than a specific query about characters or details.
+🔗 Detected continuation, boosting recent memory: "Hello there!..."
+🔗 Detected continuation, boosting recent memory: "My name is Sarah...."
+🔗 Detected continuation, boosting recent memory: "Let me tell you a story about ..."
+🔗 Detected continuation, boosting recent memory: "What was the fox's name in my ..."
+🔗 Detected continuation, boosting recent memory: "What did Rusty find in the for..."
+🔗 Detected continuation, boosting recent memory: "What is my name?..."
+🔍 Memory similarities:
+   1.351 (emb:0.313 ent:0.4 id:0.0 age:0.0 cnt:0.0 cont:0.6) [0min, 59chars]: "What did Rusty find in the forest?..."
+   1.323 (emb:0.272 ent:0.4 id:0.0 age:0.0 cnt:0.1 cont:0.6) [0min, 61chars]: "What was the fox's name in my story?..."
+   1.210 (emb:0.507 ent:0.0 id:0.0 age:0.0 cnt:0.1 cont:0.6) [0min, 506chars]: "Let me tell you a story about a clever f..."
+💬 Handling general conversation or request
+
+🤖: 
+“That’s a thrilling tale, Liam! A brave knight, a fearsome dragon, and a shining sword – it sounds like a classic adventure! 😊 It’s great to hear about Sir Marcus’s heroic deeds. 
+
+Do you want to:
+
+*   Chat about something?
+*   Get some information?
+*   Play a game?
+*   Just say hello?”
+
+✨ (used 3 memories, general_conversation, conf: 0.80)
+
+============================================================
+
+📝 Step 8/12
+Input: "Who was the knight in the second story?"
+Press ENTER to proceed, or Ctrl+C to abort...
+ 
+
+💭 Processing: "Who was the knight in the second story?"
+
+🤖: 
+fact_check_question:0.9:The user is asking about a character in a story previously presented, similar to the previous input about the fox.
+
+🎯 Intent: fact_check_question (confidence: 0.9) - fact_check_question (learned classification)
+💡 Reasoning: The user is asking about a character in a story previously presented, similar to the previous input about the fox.
+🔍 Memory similarities:
+   0.660 (emb:0.326 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [0min, 61chars]: "What was the fox's name in my story?..."
+   0.635 (emb:0.302 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [0min, 547chars]: "Here's another story: In a distant kingd..."
+   0.524 (emb:0.274 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [1min, 506chars]: "Let me tell you a story about a clever f..."
+🔍 Handling fact-check question about previous conversation
+🔍 Question terms: who, knight, second, story
+🔍 Context check: FOUND relevant content
+🔍 Context preview: "What was the fox's name in my story? The fox’s name was Rusty. Here's another story: In a distant ki..."
+
+🤖: 
+Sir Marcus was the knight in the second story.
+
+🔬 Confidence check: 100.0%
+🔬 Addresses question: true
+✨ (used 3 memories, fact_check_question, conf: 0.90)
+
+============================================================
+
+📝 Step 9/12
+Input: "What was the dragon stealing?"
+Press ENTER to proceed, or Ctrl+C to abort...
+ 
+
+💭 Processing: "What was the dragon stealing?"
+
+🤖: 
+fact_check_question:0.9:User is asking for a specific detail from the story ("In a distant kingdom..."), mirroring the previous fact-checking questions.
+
+🎯 Intent: fact_check_question (confidence: 0.9) - fact_check_question (learned classification)
+💡 Reasoning: User is asking for a specific detail from the story ("In a distant kingdom..."), mirroring the previous fact-checking questions.
+🔍 Memory similarities:
+   0.731 (emb:0.481 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [1min, 61chars]: "What was the fox's name in my story?..."
+   0.653 (emb:0.278 ent:0.0 id:0.0 age:0.0 cnt:0.4 cont:0.0) [0min, 547chars]: "Here's another story: In a distant kingd..."
+   0.557 (emb:0.307 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [1min, 59chars]: "What did Rusty find in the forest?..."
+🔍 Handling fact-check question about previous conversation
+🔍 Question terms: what, dragon, stealing
+🔍 Context check: FOUND relevant content
+🔍 Context preview: "What was the fox's name in my story? The fox’s name was Rusty. Here's another story: In a distant ki..."
+
+🤖: 
+The dragon had been stealing sheep from the farmers.
+
+🔬 Confidence check: 0.0%
+🔬 Addresses question: true
+✨ (used 3 memories, fact_check_question, conf: 0.90)
+
+============================================================
+
+📝 Step 10/12
+Input: "Which story was Ginger from?"
+Press ENTER to proceed, or Ctrl+C to abort...
+ 
+
+💭 Processing: "Which story was Ginger from?"
+
+🤖: 
+fact_check_question:0.9:User is asking about a specific character (Ginger) mentioned in a previously shared story.
+
+🎯 Intent: fact_check_question (confidence: 0.9) - fact_check_question (learned classification)
+💡 Reasoning: User is asking about a specific character (Ginger) mentioned in a previously shared story.
+🔍 Memory similarities:
+   0.484 (emb:0.234 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [1min, 547chars]: "Here's another story: In a distant kingd..."
+   0.376 (emb:0.126 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [0min, 81chars]: "What was the dragon stealing?..."
+   0.343 (emb:0.093 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [1min, 61chars]: "What was the fox's name in my story?..."
+🔍 Handling fact-check question about previous conversation
+🔍 Question terms: which, story, ginger
+🔍 Context check: FOUND relevant content
+🔍 Context preview: "Here's another story: In a distant kingdom, there lived a brave knight named Sir Marcus who protecte..."
+
+🤖: 
+I don't recall that from our conversation.
+
+🔬 Confidence check: 0.0%
+🔬 Addresses question: false
+❌ Low confidence or irrelevant response detected, providing uncertain response
+✨ (used 3 memories, fact_check_question, conf: 0.90)
+
+============================================================
+
+📝 Step 11/12
+Input: "Which story was Selly from?"
+Press ENTER to proceed, or Ctrl+C to abort...
+ 
+
+💭 Processing: "Which story was Selly from?"
+
+🤖: 
+fact_check_question:0.9:User is asking about the origin of a character from the previous story discussion.
+
+🎯 Intent: fact_check_question (confidence: 0.9) - fact_check_question (learned classification)
+💡 Reasoning: User is asking about the origin of a character from the previous story discussion.
+🔍 Memory similarities:
+   0.953 (emb:0.578 ent:0.0 id:0.0 age:0.0 cnt:0.4 cont:0.0) [0min, 80chars]: "Which story was Ginger from?..."
+   0.494 (emb:0.244 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [1min, 547chars]: "Here's another story: In a distant kingd..."
+   0.404 (emb:0.279 ent:0.0 id:0.0 age:0.0 cnt:0.1 cont:0.0) [1min, 506chars]: "Let me tell you a story about a clever f..."
+🔍 Handling fact-check question about previous conversation
+🔍 Question terms: which, story, selly
+🔍 Context check: FOUND relevant content
+🔍 Context preview: "Which story was Ginger from? I don't have that information from our conversation. Here's another sto..."
+
+🤖: 
+I don't recall that from our conversation
+
+🔬 Confidence check: 0.0%
+🔬 Addresses question: false
+❌ Low confidence or irrelevant response detected, providing uncertain response
+✨ (used 3 memories, fact_check_question, conf: 0.90)
+
+============================================================
+
+📝 Step 12/12
+Input: "What is my name again?"
+Press ENTER to proceed, or Ctrl+C to abort...
+ 
+
+💭 Processing: "What is my name again?"
+
+🤖: 
+fact_check_question:0.8:The user is likely repeating a previous question (regarding their name) to confirm the assistant's response or to clarify the context of the conversation, given the previous questions about character names.
+
+🎯 Intent: fact_check_question (confidence: 0.8) - fact_check_question (learned classification)
+💡 Reasoning: The user is likely repeating a previous question (regarding their name) to confirm the assistant's response or to clarify the context of the conversation, given the previous questions about character names.
+🔍 Memory similarities:
+   1.115 (emb:0.065 ent:0.0 id:0.8 age:0.0 cnt:0.3 cont:0.0) [1min, 294chars]: "My name is Sarah...."
+   0.848 (emb:0.598 ent:0.0 id:0.0 age:0.0 cnt:0.3 cont:0.0) [1min, 35chars]: "What is my name?..."
+   0.602 (emb:0.602 ent:0.0 id:0.0 age:0.0 cnt:0.0 cont:0.0) [1min, 81chars]: "What was the dragon stealing?..."
+🔍 Handling fact-check question about previous conversation
+🔍 Question terms: what, name, again
+🔍 Context check: FOUND relevant content
+🔍 Context preview: "My name is Sarah. “Hello Sarah! It’s lovely to meet you. 😊 So nice to finally put a name to the fri..."
+
+🤖: 
+Your name is Sarah.
+
+🔬 Confidence check: 100.0%
+🔬 Addresses question: true
+✨ (used 3 memories, fact_check_question, conf: 0.80)
+
+============================================================
+
+✅ CALIBRATION COMPLETE!
+All tests have been run. Review the responses above to verify:
+- Memory recall works correctly
+- Hallucination detection catches fake characters (Ginger, Selly)
+- Name memory persists across conversations
+- Information providing is properly acknowledged
+- Social interactions feel natural
+
+📊 Final Stats: {
+  "totalMemories": 12,
+  "avgPerformance": 0.5,
+  "memoryUsage": 6829,
+  "conversations": 12,
+  "intentBreakdown": {
+    "social_interaction": 1,
+    "information_providing": 2,
+    "fact_check_question": 8,
+    "general_conversation": 1
+  },
+  "learningMetrics": {
+    "totalClassifications": 11,
+    "intentBreakdown": {
+      "information_providing": 2,
+      "fact_check_question": 8,
+      "general_conversation": 1
+    },
+    "successRates": {
+      "information_providing": "0.0%",
+      "fact_check_question": "0.0%",
+      "general_conversation": "0.0%"
+    },
+    "learnedPatterns": 0
+  },
+  "lastActivity": "6/19/2025, 10:37:34 PM"
+}
